@@ -30,7 +30,9 @@ public class Client implements Serializable {
 	private String industry;
 	private String description;
 
-	
+	public Client(){
+		
+	}
 
 	public Client(Long id, String firstName, String lastName, String email, String source, String status, double amount,
 			String industry, String description) {
