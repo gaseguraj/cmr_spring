@@ -69,8 +69,8 @@ public class ClientController {
  
      
     //------------------- Update a User --------------------------------------------------------
-     /*
-    @RequestMapping(value = "/user/{id}", method = RequestMethod.PUT)
+     
+    @RequestMapping(value = "/client/{id}", method = RequestMethod.PUT)
     public ResponseEntity<Client> updateUser(@PathVariable("id") long id, @RequestBody Client client) {
         System.out.println("Updating Client " + id);
          
@@ -84,10 +84,16 @@ public class ClientController {
         currentClient.setFirstName(client.getFirstName());
         currentClient.setLastName(client.getLastName());
         currentClient.setEmail(client.getEmail());
+        currentClient.setSource(client.getSource());
+        currentClient.setStatus(client.getStatus());
+        currentClient.setAmount(client.getAmount());
+        currentClient.setIndustry(client.getIndustry());
+        currentClient.setDescription(client.getDescription());
+        
          
         clientService.updateClient(currentClient);
         return new ResponseEntity<Client>(currentClient, HttpStatus.OK);
-    }*/
+    }
  
     //------------------- Delete a User --------------------------------------------------------
      

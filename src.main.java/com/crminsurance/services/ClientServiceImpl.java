@@ -27,4 +27,8 @@ public class ClientServiceImpl implements ClientService {
 		return clientDao.deleteClient(id);
 	}
 
+	public boolean updateClient(Client client) {
+		return clientDao.updateClient(client);
+	}
+
 }
