@@ -55,8 +55,9 @@ public class ClientDaoImpl implements ClientDao {
 
 	public boolean updateClient(Client client) {
 		session = sessionFactory.openSession();
-		//session = this.sessionFactory.getCurrentSession();
-		session.update(client);
+		tx = session.beginTransaction();
+		session.persist(client);
+		tx.commit();
 		return true;
 	}
 
